@@ -1,34 +1,41 @@
 # 📦 Sistema de Gestión de Inventario (C++)
 
-Este es un sistema de gestión de inventarios desarrollado en C++ utilizando conceptos de **Estructuras de Datos**. El proyecto permite administrar productos, tiendas, ventas y mantener un registro histórico mediante la persistencia de datos en archivos de texto.
+Este es un sistema de gestión de inventarios desarrollado en C++ utilizando conceptos de **Estructuras de Datos**. [cite_start]El proyecto permite administrar productos, tiendas, ventas y mantener un registro histórico mediante la persistencia de datos en archivos de texto[cite: 142].
+
+## 👥 Autores
+[cite_start]Este proyecto fue desarrollado por[cite: 1]:
+* Juan Mendoza
+* Elian López
+* Joseph Contreras
+* Andrés Gonzales
 
 ## 🚀 Características
+* [cite_start]**Gestión de Productos:** Manejo del catálogo mediante `producto.txt`[cite: 163, 223].
+* [cite_start]**Control de Sucursales:** Administración de datos en `tienda.txt`[cite: 179, 224].
+* [cite_start]**Módulo de Ventas:** Registro de transacciones en `ventas.txt`[cite: 180, 225].
+* [cite_start]**Persistencia:** Registro histórico de movimientos en `historico.txt`[cite: 155, 221].
 
-* **Gestión de Productos:** Altas, bajas y modificaciones de artículos.
-* **Control de Tiendas:** Administración de diferentes sucursales o puntos de inventario.
-* **Módulo de Ventas:** Registro de transacciones en tiempo real.
-* **Persistencia de Datos:** Carga y guardado automático en archivos `.txt` para no perder la información al cerrar el programa.
-* **Reportes:** Generación de informes en formato PDF (según documentación adjunta).
+## 🛠️ Instalación y Configuración (Visual Studio 2012)
 
-## 📁 Estructura del Proyecto
+[cite_start]Para correr el proyecto correctamente, siga estos pasos basados en la documentación oficial[cite: 2]:
 
-* `main.cpp`: Punto de entrada del programa y lógica principal.
-* `Archivos de datos/`: Carpeta que contiene la base de datos en texto plano:
-    * `producto.txt`: Catálogo de artículos.
-    * `tienda.txt`: Información de sucursales.
-    * `ventas.txt`: Registro de operaciones.
-    * `historico.txt`: Log histórico de movimientos.
-* `Informe proyecto de estructuras.pdf`: Documentación técnica detallada.
+1. [cite_start]**Crear el Proyecto:** * Abra Visual Studio 2012 y cree un **Nuevo proyecto vacío** de Visual C++[cite: 3, 61, 130].
+   * [cite_start]Puede nombrarlo como desee (ej. "prueba")[cite: 93].
+2. **Preparar los Archivos:**
+   * [cite_start]Cierre Visual Studio y pegue todos los archivos de la carpeta "archivos de datos" dentro de la carpeta física de su nuevo proyecto[cite: 142].
+   * [cite_start]Los archivos principales deben incluir: `main.cpp`, `producto.txt`, `tienda.txt`, `ventas.txt` e `historico.txt`[cite: 142, 188].
+3. **Vincular en el IDE:**
+   * Reabra el proyecto en Visual Studio.
+   * [cite_start]En el **Explorador de Soluciones**, active la opción "Mostrar todos los archivos"[cite: 188].
+   * [cite_start]Haga clic derecho sobre los archivos que aparezcan con un círculo rojo y seleccione **Incluir en el proyecto**[cite: 188, 232].
+   * [cite_start]Repita este proceso para todos los archivos, especialmente para `main.cpp`[cite: 243, 244].
+4. **Compilar y Ejecutar:**
+   * [cite_start]Utilice el botón **Depurador local de Windows** o presione F5 para iniciar el sistema[cite: 213].
 
-## 🛠️ Instalación y Ejecución
+## 🧠 Lógica de Funcionamiento
+[cite_start]El sistema utiliza archivos planos para simular una base de datos persistente[cite: 142]. La lógica sigue un flujo de control donde:
+* **Derecha (+1):** Aumenta el registro o avanza en la gestión de datos.
+* **Izquierda (-1):** Retrocede o elimina registros según la ley de flujo definida.
 
-### Requisitos Previos
-* Compilador de C++ (GCC/G++ o similar).
-* Git (para clonar el repositorio).
-
-### Pasos para ejecutar
-
-1. **Clonar el repositorio:**
-   ```bash
-   git clone [https://github.com/andr-catire/Inventario--CPP-Estructura-de-Datos.git](https://github.com/andr-catire/Inventario--CPP-Estructura-de-Datos.git)
-   cd Inventario--CPP-Estructura-de-Datos
+---
+[cite_start]*Nota: Asegúrese de que los archivos .txt estén en la misma ruta que el ejecutable para que la carga de datos sea exitosa[cite: 187, 188].*
